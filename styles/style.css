@@ -103,6 +103,83 @@ ul {
           align-items: center;
 }
 
+.main__next {
+  position: relative;
+  bottom: 150px;
+  margin: 10rem auto;
+  border-radius: 30px;
+  width: 40px;
+  height: 60px;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main__next .circle {
+  background-color: #fff;
+  width: 1px;
+  justify-self: flex-end;
+  height: 10px;
+  animation: next .8s linear reverse infinite;
+}
+
+@-webkit-keyframes next {
+  0% {
+    margin-bottom: 0px;
+  }
+  15% {
+    margin-bottom: 1.5px;
+  }
+  30% {
+    margin-bottom: 3px;
+  }
+  45% {
+    margin-bottom: 4.5px;
+  }
+  60% {
+    margin-bottom: 6px;
+  }
+  75% {
+    margin-bottom: 7.5px;
+  }
+  100% {
+    margin-bottom: 8px;
+  }
+}
+
+@keyframes next {
+  0% {
+    margin-bottom: 0px;
+  }
+  15% {
+    margin-bottom: 1.5px;
+  }
+  30% {
+    margin-bottom: 3px;
+  }
+  45% {
+    margin-bottom: 4.5px;
+  }
+  60% {
+    margin-bottom: 6px;
+  }
+  75% {
+    margin-bottom: 7.5px;
+  }
+  100% {
+    margin-bottom: 8px;
+  }
+}
+
 .main__description {
   max-width: 82rem;
   font-size: 4.8rem;
@@ -134,14 +211,12 @@ ul {
 }
 
 .main__description .btn-2 {
-  color: #1B191A;
-  background: -webkit-gradient(linear, right top, left top, color-stop(40%, #89F7FE), to(#66A6FF));
-  background: linear-gradient(right, #89F7FE 40%, #66A6FF 100%);
+  color: #fff;
+  background: linear-gradient(-45deg, #89F7FE 0%, #66A6FF 100%, #66A6FF 70%, #66A6FF 100%);
 }
 
 .main__description .btn-2::after, .main__description .btn-2::before {
   border: 3px solid transparent;
-  border-radius: 20px !important;
   -o-border-image: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
      border-image: -webkit-gradient(linear, right top, left top, color-stop(100%, #89F7FE), color-stop(30%, #66A6FF));
      border-image: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
@@ -186,13 +261,53 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
+.services {
+  width: 100%;
+  min-height: 100vh;
+}
+
 .blob1 {
   position: absolute;
   width: 600px;
+  border-radius: 50% 50% 67% 33% / 67% 51% 49% 33%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #89F7FE), to(#66A6FF));
+  background: linear-gradient(left, #89F7FE 60%, #66A6FF 100%);
   height: 600px;
-  left: -360px;
+  left: -380px;
   bottom: 380px;
   z-index: -9999;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0%, 100% {
+    border-radius: 50% 50% 67% 33% / 67% 51% 49% 33%;
+  }
+  25% {
+    border-radius: 68% 32% 57% 43% / 28% 55% 45% 72%;
+  }
+  50% {
+    border-radius: 67% 33% 62% 38% / 75% 43% 57% 25%;
+  }
+  75% {
+    border-radius: 37% 63% 33% 67% / 60% 71% 29% 40%;
+  }
+}
+
+@keyframes animate {
+  0%, 100% {
+    border-radius: 50% 50% 67% 33% / 67% 51% 49% 33%;
+  }
+  25% {
+    border-radius: 68% 32% 57% 43% / 28% 55% 45% 72%;
+  }
+  50% {
+    border-radius: 67% 33% 62% 38% / 75% 43% 57% 25%;
+  }
+  75% {
+    border-radius: 37% 63% 33% 67% / 60% 71% 29% 40%;
+  }
 }
 
 .blob2 {
@@ -201,24 +316,172 @@ ul {
   height: 300px;
   left: 40%;
   top: 40px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(60%, #89F7FE), to(#66A6FF));
+  background: linear-gradient(right, #89F7FE 60%, #66A6FF 100%);
   z-index: -9999;
+  border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
+  -webkit-animation: animate2 5s linear infinite;
+          animation: animate2 5s linear infinite;
+}
+
+@-webkit-keyframes animate2 {
+  0%, 100% {
+    border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
+  }
+  25% {
+    border-radius: 32% 68% 32% 68% / 46% 27% 73% 54%;
+  }
+  50% {
+    border-radius: 29% 71% 52% 48% / 36% 36% 64% 64%;
+  }
+  75% {
+    border-radius: 75% 25% 40% 60% / 75% 47% 53% 25%;
+  }
+}
+
+@keyframes animate2 {
+  0%, 100% {
+    border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
+  }
+  25% {
+    border-radius: 32% 68% 32% 68% / 46% 27% 73% 54%;
+  }
+  50% {
+    border-radius: 29% 71% 52% 48% / 36% 36% 64% 64%;
+  }
+  75% {
+    border-radius: 75% 25% 40% 60% / 75% 47% 53% 25%;
+  }
 }
 
 .blob3 {
   position: absolute;
   width: 700px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(80%, #89F7FE), to(#66A6FF));
+  background: linear-gradient(-90deg, #89F7FE 80%, #66A6FF 100%);
   height: 700px;
-  right: -350px;
-  top: 45px;
+  right: -470px;
+  top: -100px;
   z-index: -9999;
+  -webkit-animation: animate3 4s linear infinite;
+          animation: animate3 4s linear infinite;
+}
+
+@-webkit-keyframes animate3 {
+  0%, 100% {
+    border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
+  }
+  25% {
+    border-radius: 46% 54% 31% 69% / 50% 56% 44% 50%;
+  }
+  50% {
+    border-radius: 47% 53% 28% 72% / 54% 53% 47% 46%;
+  }
+  75% {
+    border-radius: 26% 74% 58% 42% / 30% 53% 47% 70%;
+  }
+}
+
+@keyframes animate3 {
+  0%, 100% {
+    border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
+  }
+  25% {
+    border-radius: 46% 54% 31% 69% / 50% 56% 44% 50%;
+  }
+  50% {
+    border-radius: 47% 53% 28% 72% / 54% 53% 47% 46%;
+  }
+  75% {
+    border-radius: 26% 74% 58% 42% / 30% 53% 47% 70%;
+  }
 }
 
 .blob4 {
   position: absolute;
-  width: 500px;
-  height: 500px;
-  right: -110px;
-  top: 80%;
+  width: 320px;
+  height: 320px;
+  right: -70px;
+  top: 85%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #89F7FE), to(#66A6FF));
+  background: linear-gradient(left, #89F7FE 60%, #66A6FF 100%);
+  border-radius: 27% 73% 70% 30% / 25% 67% 33% 75%;
+  -webkit-animation: animate4 4s linear infinite;
+          animation: animate4 4s linear infinite;
   z-index: -9999;
+}
+
+@-webkit-keyframes animate4 {
+  0%, 100% {
+    border-radius: 27% 73% 70% 30% / 25% 67% 33% 75%;
+  }
+  25% {
+    border-radius: 31% 69% 56% 44% / 28% 31% 69% 72%;
+  }
+  50% {
+    border-radius: 71% 29% 75% 25% / 38% 39% 61% 62%;
+  }
+  75% {
+    border-radius: 61% 39% 69% 31% / 32% 66% 34% 68%;
+  }
+}
+
+@keyframes animate4 {
+  0%, 100% {
+    border-radius: 27% 73% 70% 30% / 25% 67% 33% 75%;
+  }
+  25% {
+    border-radius: 31% 69% 56% 44% / 28% 31% 69% 72%;
+  }
+  50% {
+    border-radius: 71% 29% 75% 25% / 38% 39% 61% 62%;
+  }
+  75% {
+    border-radius: 61% 39% 69% 31% / 32% 66% 34% 68%;
+  }
+}
+
+.blob5 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 200px;
+  top: 85%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #89F7FE), color-stop(0%, #66A6FF), color-stop(10%, #66A6FF));
+  background: linear-gradient(top, #89F7FE 40%, #66A6FF 0%, #66A6FF 10%);
+  border-radius: 49% 51% 31% 69% / 26% 28% 72% 74%;
+  -webkit-animation: animate5 4s linear infinite;
+          animation: animate5 4s linear infinite;
+  z-index: -9999;
+}
+
+@-webkit-keyframes animate5 {
+  0%, 100% {
+    border-radius: 49% 51% 31% 69% / 26% 28% 72% 74%;
+  }
+  25% {
+    border-radius: 31% 69% 56% 44% / 28% 31% 69% 72%;
+  }
+  50% {
+    border-radius: 71% 29% 75% 25% / 38% 39% 61% 62%;
+  }
+  75% {
+    border-radius: 61% 39% 69% 31% / 32% 66% 34% 68%;
+  }
+}
+
+@keyframes animate5 {
+  0%, 100% {
+    border-radius: 49% 51% 31% 69% / 26% 28% 72% 74%;
+  }
+  25% {
+    border-radius: 31% 69% 56% 44% / 28% 31% 69% 72%;
+  }
+  50% {
+    border-radius: 71% 29% 75% 25% / 38% 39% 61% 62%;
+  }
+  75% {
+    border-radius: 61% 39% 69% 31% / 32% 66% 34% 68%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
