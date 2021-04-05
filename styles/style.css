@@ -262,8 +262,139 @@ ul {
 }
 
 .services {
-  width: 100%;
+  margin: 60px auto;
+  width: 75%;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services__title {
+  font-size: 4.4rem;
+  color: #fff;
+}
+
+.services__slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 90px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.services__slider .services__menu {
+  cursor: pointer;
+}
+
+.services__menu {
+  height: 100%;
+}
+
+.services__menu .services__item {
+  font-size: 3.6rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+.services__menu .services__item1 {
+  font-size: 3.6rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+.services .item-active {
+  color: #333;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #fff;
+}
+
+.services__items {
+  position: relative;
+  width: 80%;
+  height: 600px;
+}
+
+.services__item-act {
+  -webkit-transition: all .6s ease-in;
+  transition: all .6s ease-in;
+}
+
+.services__item-act1 .active {
+  -webkit-transition: all .6s ease-in;
+  transition: all .6s ease-in;
+}
+
+.services #web-block {
+  display: none;
+}
+
+.services #seo-block {
+  display: none;
+}
+
+.services #design-block {
+  display: none;
+}
+
+.services__item-act.active {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0px 10px 10px 10px;
+  height: 100%;
+  background-color: #fff;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.services__item-act.active .services__image img {
+  width: 560px;
+  height: 560px;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.services__item-act.active .services__title {
+  font-size: 3rem;
+  width: 550px;
+  color: #1B191A;
+}
+
+.services__item-act1.active {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 10px 10px 10px 10px;
+  height: 100%;
+  background-color: #fff;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.services__item-act1.active .services__image img {
+  width: 560px;
+  height: 560px;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.services__item-act1.active .services__title {
+  font-size: 3rem;
+  width: 550px;
+  color: #1B191A;
 }
 
 .blob1 {
