@@ -272,7 +272,7 @@ ul {
 
     &__item-act.active {
         position: relative;
-        width: 80%;
+        width: 100%;
         padding: 2rem;
         border-radius: 0px 10px 10px 10px;
         height: 100%;
@@ -296,7 +296,7 @@ ul {
     &__item-act1.active {
         position: relative;
         padding: 2rem;
-        width: 80%;
+        width: 100%;
         border-radius: 10px 10px 10px 10px;
         height: 100%;
         background-color: #fff;
