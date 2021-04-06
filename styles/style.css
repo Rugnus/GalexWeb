@@ -407,8 +407,8 @@ ul {
   left: -380px;
   bottom: 380px;
   z-index: -9999;
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
+  -webkit-animation: animate 12s linear infinite;
+          animation: animate 12s linear infinite;
 }
 
 @-webkit-keyframes animate {
@@ -451,8 +451,8 @@ ul {
   background: linear-gradient(right, #89F7FE 60%, #66A6FF 100%);
   z-index: -9999;
   border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
-  -webkit-animation: animate2 5s linear infinite;
-          animation: animate2 5s linear infinite;
+  -webkit-animation: animate2 12s linear infinite;
+          animation: animate2 12s linear infinite;
 }
 
 @-webkit-keyframes animate2 {
@@ -494,8 +494,8 @@ ul {
   right: -470px;
   top: -100px;
   z-index: -9999;
-  -webkit-animation: animate3 4s linear infinite;
-          animation: animate3 4s linear infinite;
+  -webkit-animation: animate3 12s linear infinite;
+          animation: animate3 12s linear infinite;
 }
 
 @-webkit-keyframes animate3 {
@@ -537,8 +537,8 @@ ul {
   background: -webkit-gradient(linear, left top, right top, color-stop(60%, #89F7FE), to(#66A6FF));
   background: linear-gradient(left, #89F7FE 60%, #66A6FF 100%);
   border-radius: 27% 73% 70% 30% / 25% 67% 33% 75%;
-  -webkit-animation: animate4 4s linear infinite;
-          animation: animate4 4s linear infinite;
+  -webkit-animation: animate4 12s linear infinite;
+          animation: animate4 12s linear infinite;
   z-index: -9999;
 }
 
@@ -581,8 +581,8 @@ ul {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #89F7FE), color-stop(0%, #66A6FF), color-stop(10%, #66A6FF));
   background: linear-gradient(top, #89F7FE 40%, #66A6FF 0%, #66A6FF 10%);
   border-radius: 49% 51% 31% 69% / 26% 28% 72% 74%;
-  -webkit-animation: animate5 4s linear infinite;
-          animation: animate5 4s linear infinite;
+  -webkit-animation: animate5 12s linear infinite;
+          animation: animate5 12s linear infinite;
   z-index: -9999;
 }
 
@@ -616,3 +616,139 @@ ul {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* ****** ПОРТФОЛИО ******* */
+
+
+.portfolio{
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio__title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 4.4rem;
+  color: #fff; 
+  margin: 1rem auto;
+}
+
+.porfolio__projects {
+  margin-top: 1.5rem;
+  height: 80vh;
+  width: 40vw;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1.8fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "div1 div1 div2 div2"
+    "div1 div1 div3 div3"
+    "div4 div4 div4 div4";
+}
+
+.project__1{
+  grid-area: div1;
+  filter: brightness(100%);
+}
+
+.project__2 { 
+  grid-area: div2;
+  filter: brightness(100%);
+ }
+
+.project__3{ 
+  grid-area: div3;
+  filter: brightness(100%);
+ }
+
+.project__4 { 
+  grid-area: div4;
+  filter: brightness(100%);
+ }
+
+.project__image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -9999;
+  filter: brightness(50%);
+  border-radius: 5px;
+}
+
+.project__title{
+  z-index:1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  margin-top: -40px;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.project__description__title{
+  margin-top: 2rem;
+  color: transparent;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  transition: 0.1s color ;
+}
+
+.project__description{
+  z-index:1000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: ransparent;
+  overflow: hidden;
+  transition: .2s transform ease-in-out;
+  will-change: transform;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.project__description::after{
+  background: linear-gradient(90deg, rgba(137,247,254,1) 0%, rgba(102,166,255,1) 100%);
+  content: '';
+  display:block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: .2s transform ease-in-out;
+  will-change: transform;
+  z-index: -1;
+}
+  
+.project__description:hover::after {
+  transform:translate(0, 0);
+}
+
+.project__description:hover .project__description__title {
+  color: white;
+  transform: scale(1.05);
+  will-change: transform;
+}

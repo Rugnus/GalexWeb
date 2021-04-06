@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Веб-студия Galex</title>
+    <title>Веб-студия - GAlex</title>
 </head>
 <body>
     
@@ -19,11 +20,9 @@
       <div class="blob4"></div>
       <div class="blob5"></div>
 
-      
-
         <div class="header">
             <div class="header__logo">
-                <img src="images/header__logo.png" alt="image" width="430" height="90">
+                <img src="images/header__logo.png" alt="image" width="390" height="90">
             </div>
     
             <div class="header__menu">
@@ -37,12 +36,10 @@
         </div>
     
         <div class="main">
-            
             <div class="main__description">
                 <div class="desc"><span style="color: linear-gradient(right, #89F7FE 100%, #66A6FF 100%);">GA</span>lex - агентство полного цикла для тех, кто владеет малым или средним бизнесом, от тех, кто знает, как работает маркетинг</div>
                 <div class="buttons">
                     <a href="#" class="btn btn-2">Заказать сайт</a>
-
                 </div>
             </div>
     
@@ -62,17 +59,6 @@
       </div>
 
       <div class="services__slider">
-          <!-- <ul>
-            <li class="services__item">
-              <a href="#">Создание сайтов</a>
-            </li>
-            <li class="services__item">
-              <a href="#" class="services__item">SEO продвижение</a>
-            </li>
-            <li class="services__item">
-              <a href="#" class="services__item">Дизайн</a>
-            </li>
-          </ul> -->
 
           <div class="services__menu">
             <div class="services__item item-active" id="webdev">Создание сайтов</div>
@@ -128,15 +114,70 @@
                 <img src="images/services/services__image3.png" alt="image">
               </div>
             </div>
-            
           </div>
-
-
-          
       </div>
+       <div class="main__next" onclick="document.getElementById('#portfolio').scrollIntoView({behavior: 'smooth'})">
+          <div class="circle"></div>
+       </div>
     </div>
 
+    <div class="portfolio" id="#portfolio">
+      <div class="portfolio__title">
+        <h2>Наши проекты</h2>
+      </div>
 
+      <div class="porfolio__projects">
+       <div class="project__1">
+           <div class="project__image">
+             <img src="images/portfolio/project__1.png" alt="image" class="project__image">
+           </div>
+           <div class="project__title">
+             <h1>Language Academy</h1>
+           </div>
+           <div class="project__description">
+              <h1 class="project__description__title">АSed ut perspiciatis unde omnis bt/fdlkjwendqm, .s'fldkolnjiste natus error sritatis e</h1>
+           </div>
+       </div>
+
+       <div class="project__2">
+           <div class="project__image">
+              <img src="images/portfolio/project__2.png" alt="image" class="project__image">
+           </div>
+           <div class="project__title">
+             <h1>Венец славы</h1>
+           </div>
+           <div class="project__description">
+              <h1 class="project__description__title">АSed ut perspiciatis unde omnis iste natus error sritatis e</h1>
+           </div>
+       </div>
+      
+       <div class="project__3">
+         <div class="project__image">
+            <img src="images/portfolio/project__3.png" alt="image" class="project__image">
+          </div>
+          <div class="project__title">
+             <h1>Азурит</h1>
+          </div>
+          <div class="project__description">
+            <h1 class="project__description__title">АSed ut perspiciatis unde omnis iste natus error sritatis e</h1>
+          </div>
+       </div>
+       
+       <div class="project__4">
+        <div class="project__image">
+            <img src="images/portfolio/project__4.png" alt="image" class="project__image">
+        </div>
+        <div class="project__title">
+             <h1>Спортивный комплекс <br>
+              «Восток-Арена»</h1>
+          </div>
+          <div class="project__description">
+             <h1 class="project__description__title">АSed ut perspiciatis unde<br> omnis iste natus error sritatis e</h1>
+          </div>
+       </div>
+       
+      </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
