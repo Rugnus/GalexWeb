@@ -710,7 +710,7 @@ ul {
   font-size: 3rem;
   width: 100%;
   text-align: center;
-  transition: 0.1s color ;
+  transition: 0.15s color ;
 }
 
 .project__description{
@@ -721,7 +721,7 @@ ul {
   top: 0;
   background: ransparent;
   overflow: hidden;
-  transition: .2s transform ease-in-out;
+  transition: .3s transform ease-in-out;
   will-change: transform;
   z-index: 1;
   border-radius: 5px;
@@ -738,7 +738,7 @@ ul {
   top: 0;
   transform: translate(-100%, 0) rotate(10deg);
   transform-origin: top left;
-  transition: .2s transform ease-in-out;
+  transition: .3s transform ease-in-out;
   will-change: transform;
   z-index: -1;
 }
