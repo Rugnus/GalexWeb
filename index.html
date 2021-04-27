@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Веб-студия - GAlex</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
 
       <div class="blob4"></div>
       <div class="blob5"></div>
+
 
         <div class="header">
             <div class="header__logo">
@@ -116,12 +118,16 @@
             </div>
           </div>
       </div>
-       <div class="main__next" onclick="document.getElementById('#portfolio').scrollIntoView({behavior: 'smooth'})">
-          <div class="circle"></div>
-       </div>
     </div>
 
     <div class="portfolio" id="#portfolio">
+      <div class="blob6"></div>
+
+      <div class="blob7"></div>
+      <div class="blob8"></div>
+
+      
+
       <div class="portfolio__title">
         <h2>Наши проекты</h2>
       </div>
@@ -135,8 +141,11 @@
              <h1>Language Academy</h1>
            </div>
            <div class="project__description">
-              <h1 class="project__description__title">АSed ut perspiciatis unde omnis bt/fdlkjwendqm, .s'fldkolnjiste natus error sritatis e</h1>
-           </div>
+              <h1>Language Academy</h1>
+              <p class="project__description__title">АSed ut perspiciatis unde omnis bt/fdlkjwendqm, .s'fldkolnjiste natus error sritatis e</p>
+              <img src="images/portfolio/project__button.svg" alt="" class="project__button">
+            
+            </div>
        </div>
 
        <div class="project__2">
@@ -147,7 +156,9 @@
              <h1>Венец славы</h1>
            </div>
            <div class="project__description">
-              <h1 class="project__description__title">АSed ut perspiciatis unde omnis iste natus error sritatis e</h1>
+              <h1>Венец славы</h1>
+              <p class="project__description__title">АSed ut perspiciatis unde omnis iste natus error sritatis e</p>
+              <img src="images/portfolio/project__button.svg" alt="" class="project__button">
            </div>
        </div>
       
@@ -159,7 +170,9 @@
              <h1>Азурит</h1>
           </div>
           <div class="project__description">
-            <h1 class="project__description__title">АSed ut perspiciatis unde omnis iste natus error sritatis e</h1>
+            <h1>Азурит</h1>
+            <p class="project__description__title">АSed ut perspiciatis unde omnis iste natus error sritatis e</p>
+            <img src="images/portfolio/project__button.svg" alt="" class="project__button">
           </div>
        </div>
        
@@ -172,12 +185,44 @@
               «Восток-Арена»</h1>
           </div>
           <div class="project__description">
-             <h1 class="project__description__title">АSed ut perspiciatis unde<br> omnis iste natus error sritatis e</h1>
+            <h1>Спортивный комплекс 
+              «Восток-Арена»</h1>
+             <p class="project__description__title">АSed ut perspiciatis unde<br> omnis iste natus error sritatis e</p>
+            <img src="images/portfolio/project__button.svg" alt="" class="project__button">
           </div>
        </div>
        
       </div>
     </div>
+
+    <div class="callback">
+      <div class="callback__title">
+        <h3>Обратная связь</h3>
+      </div>
+
+      <div class="callback__form">
+        <form id="form" name="form">
+            <input type="text" placeholder="Ваше имя" name="name" required>
+            <label for="name"></label>
+            <!-- <input type="email" placeholder="Ваша почта" name="email" class="form-control-material" required>
+            <label for="email"></label> -->
+            <input type="phone" placeholder="Ваш телефон" name="phone" class="form-control-material" required>
+            <label for="phone"></label>
+            <!-- <textarea name="message" placeholder="Ваше сообщение" id="message" cols="30" rows="5" ></textarea> -->
+            <button class="callback__button">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="overlay js-overlay-thank-you">
+        <div class="popup js-thank-you">
+          <h2>Спасибо за заявку</h2>
+          <div class="close-popup js-close-thank-you"></div>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -463,6 +463,84 @@ ul {
         border-radius: 61% 39% 69% 31% / 32% 66% 34% 68%;
     }
 }
+.blob6 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: -50px;
+    top: 140%;
+    background: linear-gradient(top, #89F7FE 40%,#66A6FF 0%, #66A6FF 10%);
+    border-radius: 36% 40% 81% 19% / 40% 45% 55% 60%;
+    animation: animate6 8s linear infinite;
+    z-index: -9999;
+}
+@keyframes animate6 {
+    0%, 100% {
+        border-radius: 36% 40% 81% 19% / 40% 45% 55% 60%;
+    }
+    25% {
+        border-radius: 17% 83% 44% 56% / 46% 52% 48% 54%;
+    }
+    50% {
+        border-radius: 11% 89% 58% 42% / 13% 64% 36% 87%;
+    }
+    75% {
+        border-radius: 44% 56% 63% 37% / 32% 42% 58% 68%;
+    }
+}
+
+.blob7 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 1000px;
+    top: 165%;
+    background: linear-gradient(top, #89F7FE 45%,#66A6FF 40%, #66A6FF 100%);
+    border-radius: 70% 20% 50% 50% / 60% 40% 60% 40%;
+    animation: animate7 8s linear infinite;
+    z-index: -9999;
+}
+@keyframes animate7 {
+    0%, 100% {
+        border-radius: 36% 40% 81% 19% / 40% 45% 55% 60%;
+    }
+    25% {
+        border-radius: 17% 83% 44% 56% / 46% 52% 48% 54%;
+    }
+    50% {
+        border-radius: 11% 89% 58% 42% / 13% 64% 36% 87%;
+    }
+    75% {
+        border-radius: 44% 56% 63% 37% / 32% 42% 58% 68%;
+    }
+}
+
+.blob8 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: 150px;
+    top: 130%;
+    background: linear-gradient(top, #89F7FE 40%,#66A6FF 0%, #66A6FF 10%);
+    border-radius: 34% 66% 67% 33% / 32% 30% 70% 68%;
+    animation: animate7 8s linear infinite;
+    z-index: -9999;
+}
+@keyframes animate8 {
+    0%, 100% {
+        border-radius: 36% 40% 81% 19% / 40% 45% 55% 60%;
+    }
+    25% {
+        border-radius: 17% 83% 44% 56% / 46% 52% 48% 54%;
+    }
+    50% {
+        border-radius: 11% 89% 58% 42% / 13% 64% 36% 87%;
+    }
+    75% {
+        border-radius: 44% 56% 63% 37% / 32% 42% 58% 68%;
+    }
+}
+
 
 /* ****** ПОРТФОЛИО ******* */
 
@@ -552,8 +630,9 @@ ul {
 .project__description__title{
   margin-top: 2rem;
   color: transparent;
-  font-size: 3rem;
-  width: 100%;
+  font-size: 2.1rem;
+  font-weight: 400;
+  width: 90%;
   text-align: center;
   transition: 0.15s color ;
 }
@@ -563,6 +642,10 @@ ul {
   width: 100%;
   height: 100%;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   top: 0;
   background: ransparent;
   overflow: hidden;
@@ -570,6 +653,11 @@ ul {
   will-change: transform;
   z-index: 1;
   border-radius: 5px;
+
+    h1 {
+        font-size: 3rem;
+        color: transparent;
+    }
 }
 
 .project__description::after{
@@ -596,4 +684,135 @@ ul {
   color: white;
   transform: scale(1.05);
   will-change: transform;
+}
+
+.project__description:hover h1 {
+    color: #fff;
+}
+
+.project__button {
+    display: none;
+    cursor: pointer;
+}
+
+.project__description:hover .project__button {
+    display: block;
+    margin-top: 2.5rem;
+}
+
+
+/* ****** ОБРАТНАЯ СВЯЗЬ ******* */
+
+.callback {
+    max-width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        font-size: 3rem;
+        color: #fff;
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+    .callback__form form{
+        display: flex;
+        flex-direction: column;
+        input, textarea {
+            width: 60rem;
+            padding: 1rem;
+            font-size: 2.5rem;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .7);
+            margin-bottom: 4rem;
+            transition: all .3s linear;
+            color: #fff
+        }
+        input:focus, textarea:focus {
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+        input:first-child {
+            margin-top: 2rem;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            padding: 1.5rem;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 2rem;
+            width: 30%;
+            margin: 1rem auto;
+            background: transparent;
+            border: 2px solid #89F7FE;
+            cursor: pointer;
+            transition: all 1s ease-in-out;
+        }
+        button:hover {
+            border: none;
+            background: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
+        }
+        
+    }
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: #fff;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.close-popup::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    height: 1px;
+    width: 31px;
+    top: 11px;
+    left: -4px;
+    transform: rotate(-45deg);
+}
+
+.close-popup::after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    height: 1px;
+    width: 31px;
+    top: 11px;
+    left: -4px;
+    transform: rotate(45deg);
 }
