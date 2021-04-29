@@ -57,30 +57,25 @@ $(document).ready(function () {
     });
 
     // ОТПРАВКА ЗАЯВКИ
-    $('#form').submit(function() {
-        if (document.form.name.value == '' || document.form.phone.value == '') {
-            valid = false;
-            alert('Заполните все поля!');
-            return valid;
-        }
-        $.ajax({
-            type: "POST",
-            // headers: {
-            //     'Access-Control-Allow-Origin': '*'
-            //  },
-            url: "mail.php",
-            dataType: "html",
-            data: $(this).serialize(),
-            beforeSend: load,
-            success: load_success
-        }).done(function() {
-            $('.js-overlay-thank-you').fadeIn();
-            $(this).find('input').val('');
-            $('#form').trigger('reset');
-        });
-        console.log("Forma отправлена");
-        return false;
-    });
+    $('#form').submit(function(e) { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+        e.preventDefault();
+        e.stopPropagation();
+        if (document.form.name.value == '' || document.form.phone.value == '' ) {
+			valid = false;
+			return valid;
+		}
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize(),
+            success: function() {
+                console.log("Message send");
+                $('.js-overlay-thank-you').fadeIn();
+                $(this).find('input').val('');
+                $('#form').trigger('reset');
+            },
+		});
+	});
 });
 
 // ЗАКРЫТЬ ПОПАП "СПАСИБО"
