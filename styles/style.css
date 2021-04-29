@@ -1343,6 +1343,69 @@ li a:hover::before {
   background: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
 }
 
+@media screen and (max-width: 850px) {
+  .callback__form form button {
+    width: 80% !important;
+  }
+  .callback__form form input,
+  .callback__form form textarea {
+    width: 40rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .callback__form form input,
+  .callback__form form textarea {
+    width: 24rem !important;
+  }
+}
+
+.button-wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  border-radius: 40px;
+  margin: 5px auto;
+}
+
+.button-wrapper span.label {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  border: 1px solid gray;
+  border-style: dashed;
+  cursor: pointer;
+  color: gray;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#upload {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -1396,5 +1459,46 @@ li a:hover::before {
   left: -4px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.footer {
+  max-width: 100%;
+  height: 200px;
+  margin-top: 3rem;
+  background-color: #323232;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__title {
+  font-size: 2rem;
+}
+
+.footer__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 300px;
+  max-width: 400px;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
