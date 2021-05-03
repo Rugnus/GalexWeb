@@ -501,7 +501,7 @@ li a:hover::before {
 
 .services__item-act.active {
   position: relative;
-  width: 70vw;
+  max-width: 1300px;
   padding: 2rem;
   border-radius: 0px 10px 10px 10px;
   max-height: 70vh;
@@ -509,6 +509,9 @@ li a:hover::before {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services__item-act.active .services__image img {
@@ -528,7 +531,7 @@ li a:hover::before {
 .services__item-act1.active {
   position: relative;
   padding: 2rem;
-  width: 70vw;
+  width: 83vw;
   border-radius: 10px 10px 10px 10px;
   max-height: 70vh;
   background-color: #fff;
@@ -551,6 +554,33 @@ li a:hover::before {
   color: #1B191A;
 }
 
+@media (max-width: 650px) {
+  .services__slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .services__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .item-active {
+    border-radius: 10px 10px 0px 0px !important;
+  }
+  .services__item-act.active {
+    max-width: 400px !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .services__item-act.active {
     display: -webkit-box;
@@ -566,11 +596,12 @@ li a:hover::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-width: 800px;
     padding: 0.5rem;
   }
   .services__item-act.active .services__title {
     font-size: 2.5vw;
-    width: 40vw;
+    max-width: 40vw;
     color: #1B191A;
   }
   .services__item-act.active .services__title .services__image img {

@@ -417,12 +417,13 @@ li a:hover::before {
 
     &__item-act.active {
         position: relative;
-        width: 70vw;
+        max-width: 1300px;
         padding: 2rem;
         border-radius: 0px 10px 10px 10px;
         max-height: 70vh;
         background-color: #fff;
         display: flex !important;
+        justify-content: space-between;
 
         .services__image img{
             width: 25vw;
@@ -442,7 +443,7 @@ li a:hover::before {
     &__item-act1.active {
         position: relative;
         padding: 2rem;
-        width: 70vw;
+        width: 83vw;
         border-radius: 10px 10px 10px 10px;
         max-height: 70vh;
         background-color: #fff;
@@ -463,6 +464,23 @@ li a:hover::before {
         }
     }
 }
+@media (max-width: 650px) {
+    .services__slider {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .services__menu {
+        display: flex;
+        flex-direction: row !important;
+    }
+    .item-active {
+        border-radius: 10px 10px 0px 0px !important;
+    }
+    .services__item-act.active {
+        max-width: 400px !important;
+    }
+
+}
 
 @media (max-width: 1200px) {
     .services {
@@ -471,10 +489,11 @@ li a:hover::before {
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            max-width: 800px;
             padding: 0.5rem;
             .services__title {
             font-size: 2.5vw;
-            width: 40vw;
+            max-width: 40vw;
             color: #1B191A;
 
             .services__image img{

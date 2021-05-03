@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" type="text/javascript"></script>
     <title>Веб-студия - GAlex</title>
 </head>
 <body>
@@ -198,18 +199,20 @@
       </div>
 
       <div class="callback__form">
-        <form class="form" id="form" name="form">
-          <input type="text" class="form-field" name="name" placeholder="Введите ваше имя">
+        <form class="form" id="form" name="form" enctype="multipart/form-data" method="post">
+          <input type="text" class="form-field" name="name" id="name" placeholder="Введите ваше имя">
+          <input type="email" name="contactFF" id="contactFF" required placeholder="например, ivan@yandex.ru" x-autocompletetype="email" class="w100 border">
           <input type="text" class="form-field" name="phone" placeholder="Введите ваш телефон">
           
-          <textarea id="my-textarea" class="form-control" name="message" rows="8" placeholder="Ваше сообщение"></textarea>
+          <textarea id="message" class="form-control" name="message" rows="8" placeholder="Ваше сообщение"></textarea>
           <div class="button-wrapper">
             <span class="label">
               Прикрепить файл
             </span>
-            <input type="file" name="upload" id="upload" class="upload-box" placeholder="Upload File">
+            <input type="file" name="fileFF" id="fileFF" class="upload-box" placeholder="Upload File">
           </div>
-          <button class="form-button"><span class="text-button">Отправить заявку</span></button>
+          <input class="form-button" value="Отправить" name="submit" type="submit"></input>
+          <input type="hidden" name="formData" value="Заявка с сайта">
         </form>
       </div>
     </div> 
@@ -241,5 +244,6 @@
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
