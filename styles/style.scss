@@ -848,139 +848,71 @@ li a:hover::before {
   margin: 1rem auto;
 }
 
-.porfolio__projects {
-  margin-top: 1.5rem;
-  height: 80vh;
-  width: 40vw;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1.8fr;
-  gap: 20px 20px;
-  grid-template-areas:
-    "div1 div1 div2 div2"
-    "div1 div1 div3 div3"
-    "div4 div4 div4 div4";
-}
 
-.project__1{
-  grid-area: div1;
-  filter: brightness(100%);
-}
-
-.project__2 { 
-  grid-area: div2;
-  filter: brightness(100%);
- }
-
-.project__3{ 
-  grid-area: div3;
-  filter: brightness(100%);
- }
-
-.project__4 { 
-  grid-area: div4;
-  filter: brightness(100%);
- }
-
-.project__image{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -9999;
-  filter: brightness(50%);
-  border-radius: 5px;
-}
-
-.project__title{
-  z-index:1;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 40px;
-  padding: 0;
-  margin: 0;
-  margin-top: -40px;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-}
-
-.project__description__title{
-  margin-top: 2rem;
-  color: transparent;
-  font-size: 2.1rem;
-  font-weight: 400;
-  width: 90%;
-  text-align: center;
-  transition: 0.15s color ;
-}
-
-.project__description{
-  z-index:1000;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  background: ransparent;
-  overflow: hidden;
-  transition: .3s transform ease-in-out;
-  will-change: transform;
-  z-index: 1;
-  border-radius: 5px;
-
-    h1 {
-        font-size: 3rem;
-        color: transparent;
-    }
-}
-
-.project__description::after{
-  background: linear-gradient(90deg, rgba(137,247,254,1) 0%, rgba(102,166,255,1) 100%);
-  content: '';
-  display:block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-100%, 0) rotate(10deg);
-  transform-origin: top left;
-  transition: .3s transform ease-in-out;
-  will-change: transform;
-  z-index: -1;
-}
+.grid {
+  display:grid;
+  width:100%;
+  max-width:1000px;
+  padding:0;
+  list-style-type:none;
   
-.project__description:hover::after {
-  transform:translate(0, 0);
+  grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap:2rem;
 }
 
-.project__description:hover .project__description__title {
+@media screen and (min-width: 768px){
+  .grid__item:nth-child(4){
+    grid-column: span 2;
+  }
+}
+
+.card {
+  background-color: #444;
+  text-decoration: none;
   color: white;
-  transform: scale(1.05);
-  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition:transform .1s ease-in;
+  
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.16);
+    transform:scale(1.025);
+  }
+  
+  &__image {
+    img {
+      width:100%;
+      height:250px;
+      object-fit: cover;
+    }
+  }
+  
+  &__content {
+    padding:1rem;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+  
+  &__title {
+    margin:0;
+  }
+  
+  &__body {
+    flex:1;
+  }
+  
+  &__footer {
+    text-transform:uppercase;
+    font-size:.75rem;
+    color:#666;
+    font-weight:600;
+  }
 }
-
-.project__description:hover h1 {
-    color: #fff;
-}
-
-.project__button {
-    display: none;
-    cursor: pointer;
-}
-
-.project__description:hover .project__button {
-    display: block;
-    margin-top: 2.5rem;
-}
-
 
 /* ****** ОБРАТНАЯ СВЯЗЬ ******* */
 
@@ -991,6 +923,7 @@ li a:hover::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 
     &__title {
         font-size: 3rem;
