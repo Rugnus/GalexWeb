@@ -1289,6 +1289,9 @@ li a:hover::before {
 }
 
 @media screen and (max-width: 850px) {
+  .main__next {
+    display: none;
+  }
   .callback__form form button {
     width: 80% !important;
   }
