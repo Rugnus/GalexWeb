@@ -412,6 +412,11 @@ li a:hover::before {
     width: 40vw;
     color: #1B191A;
   }
+  .services__item-act1.active .services__title {
+    font-size: 5vw;
+    width: 40vw;
+    color: #1B191A;
+  }
 }
 
 .services {
@@ -515,7 +520,7 @@ li a:hover::before {
 }
 
 .services__item-act.active .services__image img {
-  width: 25vw;
+  width: 30vw;
   height: 30vw;
   border-radius: 10px;
   margin-right: 1rem;
@@ -530,22 +535,25 @@ li a:hover::before {
 
 .services__item-act1.active {
   position: relative;
+  max-width: 1300px;
   padding: 2rem;
-  width: 83vw;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 10px 10px 10px;
   max-height: 70vh;
   background-color: #fff;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services__item-act1.active .services__image img {
-  width: 25vw;
+  width: 30vw;
   height: 30vw;
   border-radius: 10px;
-  margin-left: 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .services__item-act1.active .services__title {
