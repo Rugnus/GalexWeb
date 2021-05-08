@@ -1276,15 +1276,14 @@ li a:hover::before {
   font-size: 2rem;
   width: 30%;
   margin: 1rem auto;
-  background: transparent;
-  border: 2px solid #89F7FE;
+  background: -webkit-gradient(linear, right top, left top, color-stop(10%, #89F7FE), to(#66A6FF));
+  background: linear-gradient(right, #89F7FE 10%, #66A6FF 100%);
   cursor: pointer;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
 .callback .callback__form form button:hover {
-  border: none;
   background: -webkit-gradient(linear, right top, left top, color-stop(100%, #89F7FE), color-stop(30%, #66A6FF));
   background: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
 }

@@ -965,19 +965,32 @@ li a:hover::before {
             font-size: 2rem;
             width: 30%;
             margin: 1rem auto;
-            background: transparent;
-            border: 2px solid #89F7FE;
+            background: linear-gradient(right, #89F7FE 10%, #66A6FF 100%);
             cursor: pointer;
-            transition: all 1s ease-in-out;
+            transition: background 0.4s ease-in-out;
         }
         button:hover {
-            border: none;
             background: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
         }
         
     }
 
 }
+// .form-button {
+//     padding: 1.5rem;
+//     border-radius: 20px;
+//     color: #fff;
+//     font-size: 2rem;
+//     width: 30%;
+//     margin: 1rem auto;
+//     background: 
+//     cursor: pointer;
+//     transition: all .7s ease-in-out;    
+//     &:hover {
+//         background: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
+//     }
+// }
+
 
 @media screen and (max-width: 850px) {
     .callback__form form button {
