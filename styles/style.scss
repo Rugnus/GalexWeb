@@ -156,7 +156,7 @@ li a:hover::before {
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media screen and (min-width: 48em) {
 
   .header li {
     float: left;
@@ -235,7 +235,7 @@ li a:hover::before {
         max-width: 50vw;
         font-size: 2vw;
         span {
-            background: linear-gradient(left, #89F7FE 70%, #66A6FF 100%);
+            background: linear-gradient(to left, #89F7FE 70%, #66A6FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -263,7 +263,7 @@ li a:hover::before {
 
         .btn-2::after, .btn-2::before {
             border: 3px solid transparent;
-            border-image: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
+            border-image: linear-gradient(to right, #89F7FE 100%, #66A6FF 30%);
             border-image-slice: 1;
             content: "";
             position: absolute;
@@ -295,14 +295,14 @@ li a:hover::before {
             color: #fff;
         }
         .title-gradient {
-            background: linear-gradient(left, #89F7FE 40%, #66A6FF 100%);
+            background: linear-gradient(to left, #89F7FE 40%, #66A6FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     } 
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .main {
     width: 80vw;
     height: 95vh;
@@ -472,7 +472,7 @@ li a:hover::before {
         }
     }
 }
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .services__slider {
         display: flex;
         flex-direction: column !important;
@@ -490,7 +490,7 @@ li a:hover::before {
 
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .services {
         &__item-act.active{
             display: flex;
@@ -536,7 +536,7 @@ li a:hover::before {
 }
 
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .services {
         &__item-act.active{
             display: flex;
@@ -586,7 +586,7 @@ li a:hover::before {
     position: absolute;
     width: 30vw;
     border-radius: 50% 50% 67% 33% / 67% 51% 49% 33%;
-    background: linear-gradient(left, #89F7FE 60%, #66A6FF 100%);
+    background: linear-gradient(to left, #89F7FE 60%, #66A6FF 100%);
     height: 30vw;
     left: -25vw;
     z-index: -9999;
@@ -613,7 +613,7 @@ li a:hover::before {
     height: 14vw;
     left: 30%;
     top: 10px;
-    background: linear-gradient(right, #89F7FE 60%, #66A6FF 100%);
+    background: linear-gradient(to right, #89F7FE 60%, #66A6FF 100%);
     z-index: -9999;
     border-radius: 71% 29% 54% 46% / 43% 58% 42% 57%;
     animation: animate2 12s linear infinite;
@@ -666,7 +666,7 @@ li a:hover::before {
     height: 30vw;
     right: 0;
     top: 85%;
-    background: linear-gradient(left, #89F7FE 60%, #66A6FF 100%);
+    background: linear-gradient(to left, #89F7FE 60%, #66A6FF 100%);
     border-radius: 27% 73% 70% 30% / 25% 67% 33% 75%;
     animation: animate4 12s linear infinite;
     z-index: -9999;
@@ -692,7 +692,7 @@ li a:hover::before {
     height: 15vw;
     left: 10vw;
     top: 70%;
-    background: linear-gradient(top, #89F7FE 40%,#66A6FF 0%, #66A6FF 10%);
+    background: linear-gradient(to top, #89F7FE 40%,#66A6FF 90%, #66A6FF 100%);
     border-radius: 49% 51% 31% 69% / 26% 28% 72% 74%;
     animation: animate5 12s linear infinite;
     z-index: -9999;
@@ -717,7 +717,7 @@ li a:hover::before {
     height: 20vw;
     left: -70px;
     top: 140vh;
-    background: linear-gradient(top, #89F7FE 40%,#66A6FF 0%, #66A6FF 10%);
+    background: linear-gradient(-58deg, #89F7FE 40%,#66A6FF 80%, #66A6FF 10%);
     border-radius: 36% 40% 81% 19% / 40% 45% 55% 60%;
     animation: animate6 8s linear infinite;
     z-index: -9999;
@@ -743,7 +743,7 @@ li a:hover::before {
     height: 45vh;
     right: 0;
     top: 145vh;
-    background: linear-gradient(right, #89F7FE 45%,#66A6FF 15%, #66A6FF 10%);
+    background: linear-gradient(40deg,  #66A6FF 20%, #89F7FE 60%, #89F7FE 100%,);
     border-radius: 70% 20% 50% 50% / 60% 40% 60% 40%;
     animation: animate7 8s linear infinite;
     z-index: -9999;
@@ -769,7 +769,7 @@ li a:hover::before {
     height: 30vh;
     right: 0vh;
     top: 120vh;
-    background: linear-gradient(top, #89F7FE 40%,#66A6FF 0%, #66A6FF 10%);
+    background: linear-gradient(to top, #89F7FE 40%,#66A6FF 0%, #66A6FF 10%);
     border-radius: 34% 66% 67% 33% / 32% 30% 70% 68%;
     animation: animate7 8s linear infinite;
     z-index: -9999;
@@ -789,13 +789,13 @@ li a:hover::before {
     }
 }
 
-@media (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
     .blob7{
         top:130vh;
     }
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .blob2{
         top: 80vh;
         left: 70%;
@@ -819,7 +819,7 @@ li a:hover::before {
     }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
     .blob6{
         top:120vh
@@ -864,7 +864,7 @@ li a:hover::before {
   padding:0;
   list-style-type:none;
   
-  grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-gap:2rem;
 }
 
@@ -931,7 +931,7 @@ li a:hover::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 0px;
 
     &__title {
         font-size: 3rem;
@@ -973,12 +973,12 @@ li a:hover::before {
             font-size: 2rem;
             width: 30%;
             margin: 1rem auto;
-            background: linear-gradient(right, #89F7FE 10%, #66A6FF 100%);
+            background: linear-gradient(to right, #89F7FE 10%, #66A6FF 100%);
             cursor: pointer;
             transition: background 0.4s ease-in-out;
         }
         button:hover {
-            background: linear-gradient(right, #89F7FE 100%, #66A6FF 30%);
+            background: linear-gradient(to right, #89F7FE 100%, #66A6FF 30%);
         }
         
     }
