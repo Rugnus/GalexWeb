@@ -528,7 +528,7 @@ li a:hover::before {
 }
 
 .services__item-act.active .services__title {
-  font-size: 2vw;
+  font-size: 1.5vw;
   width: 40vw;
   color: #1B191A;
 }
@@ -557,7 +557,7 @@ li a:hover::before {
 }
 
 .services__item-act1.active .services__title {
-  font-size: 2vw;
+  font-size: 1.5vw;
   width: 40vw;
   color: #1B191A;
 }
