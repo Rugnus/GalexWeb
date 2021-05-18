@@ -7,8 +7,10 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Веб-студия - GAlex</title>
 </head>
 <body>
@@ -37,14 +39,14 @@
     
         <div class="main" id="main">
             <div class="main__description">
-                <div class="desc"><p><span >GA</span>lex - компания, занимающаяся услугами по созданию и продвижению сайтов, мобильных приложений и телеграмм ботов. <br>Мы поможем вашему бизнесу перейти на новый уровень  </p></div>
+                <div class="desc" data-aos="fade-right"><p><span >GA</span>lex - компания, занимающаяся услугами по созданию и продвижению сайтов, мобильных приложений и телеграмм ботов. <br>Мы поможем вашему бизнесу перейти на новый уровень  </p></div>
                 <div class="buttons">
-                    <a href="#" class="btn btn-2">Заказать сайт</a>
+                    <a href="#" class="btn btn-2" data-aos="fade-right">Заказать сайт</a>
                 </div>
             </div>
     
             <div class="main__title">
-                <h1 style="font-weight: bold;" class="title-gradient">GA</h1><p>lex</p>
+                <h1 style="font-weight: bold;" class="title-gradient" data-aos="fade-left">GA</h1><p data-aos="fade-left">lex</p>
             </div>
         </div>
 
@@ -54,7 +56,7 @@
     </div>
 
     <div class="services" id="services">
-      <div class="services__title">
+      <div class="services__title" data-aos="zoom-in">
         <h2>Наши услуги</h2>
       </div>
 
@@ -62,13 +64,13 @@
 
    
 
-          <div class="services__menu">
+          <div class="services__menu" data-aos="zoom-out-left">
             <div class="services__item item-active" id="webdev">Разработка сайтов</div>
             <div class="services__item" id="seo">Мобильные приложения</div>
             <div class="services__item" id="design">Telegram-боты</div>
           </div>
 
-          <div class="services__items">
+          <div class="services__items" data-aos="zoom-out-left">
 
             <div class="services__item-act active" id="web-block">
               <div class="services__title">
@@ -131,12 +133,12 @@
 
       <div class="blob7"></div> 
 
-      <div class="portfolio__title">
+      <div class="portfolio__title" data-aos="zoom-out-up">
         <h2>Наши проекты</h2>
       </div>
 
-      <ul class="grid">
-        <li class="grid__item">
+      <ul class="grid" >
+        <li class="grid__item" data-aos="zoom-in-right">
           <a href="#" class="card">
       <div class="card__image">
         <img src="images/portfolio/project__1.png" alt="Сайт английского языка" />
@@ -153,7 +155,7 @@
     </a>
     
   </li>
-    <li class="grid__item">
+    <li class="grid__item" data-aos="fade-up">
  
     <a href="#" class="card">
       <div class="card__image">
@@ -171,7 +173,7 @@
     </a>
     
   </li>
-    <li class="grid__item">
+    <li class="grid__item" data-aos="zoom-in-left">
  
     <a href="#" class="card">
       <div class="card__image">
@@ -188,7 +190,7 @@
       </article>
     </a>
   </li>
-    <li class="grid__item">
+    <li class="grid__item" data-aos="flip-down">
     <a href="#" class="card">
       <div class="card__image">
         <img src="images/portfolio/project__4.png" alt="Спортивный комплекс Восток-Арена" />
@@ -205,7 +207,7 @@
     </a>
   </li>
 
-   <li class="grid__item">
+   <li class="grid__item" data-aos="flip-right">
     <a href="#" class="card">
       <div class="card__image">
         <img src="images/portfolio/project__5.png" alt="Продажа окон - Оконния" />
@@ -225,35 +227,34 @@
   
       </div>
 
-    <div class="callback">
-      <div class="callback__title">
+    <div class="callback" >
+      <div class="callback__title" data-aos="flip-up">
         <h3>Обратная связь</h3>
       </div>
 
       <div class="callback__form">
-        <form class="form" id="form" name="form" enctype="multipart/form-data" method="post">
-          <input class="form__input" type="text" class="form-field _req" name="name" id="name" placeholder="Введите ваше имя">
-          <input class="form__input" type="email" name="email" id="email" required placeholder="например, ivan@yandex.ru" class="w100 border _req _email">
-          <input class="form__input" type="text" class="form-field _req" name="phone" placeholder="Введите ваш телефон" id="phone" name="phone">
+        <form class="form" id="form" name="form" enctype="multipart/form-data" method="post" >
+          <input class="form__input" type="text" class="form-field _req" name="name" id="name" placeholder="Введите ваше имя" data-aos="flip-right">
+          <input class="form__input" type="email" name="email" id="email" required placeholder="например, ivan@yandex.ru" class="w100 border _req _email" data-aos="flip-left">
+          <input class="form__input" type="text" class="form-field _req" name="phone" placeholder="Введите ваш телефон" id="phone" name="phone" data-aos="flip-right">
           
-          <textarea id="message" class="form-control" name="message" rows="8" placeholder="Ваше сообщение"></textarea>
+          <textarea id="message" class="form-control" name="message" rows="8" placeholder="Ваше сообщение" data-aos="fade-right"></textarea>
           <!-- <div class="button-wrapper">
             <span class="label">
               Прикрепить файл
             </span>
           </div> -->
-          <label for="file" class="label">
+          <label for="file" class="label"  data-aos="fade-up">
             <i class="material-icons">attach_file</i>
             <span class="title">Добавить файл</span>
             <input type="file" name="file" id="file" class="form__upload" 
             accept=".doc, .docx, .pdf, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
             <div class="file-show"></div>
-
           </label>
             
             
           
-          <button class="form-button" name="submit" type="submit">Отправить</button>
+          <button class="form-button" name="submit" type="submit" data-aos="fade-up">Отправить</button>
           <input type="hidden" name="formData" value="Заявка с сайта">
         </form>
       </div>
@@ -290,6 +291,10 @@
     </footer>
 
     <script src="script.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
+
 </html>
