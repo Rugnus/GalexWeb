@@ -65,43 +65,110 @@
 
 
 // ---------------- ВАРИАНТ 3 -------------------
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['name'])) {$name = $_POST['name'];}
-    if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
-    // if (isset($_POST['email'])) {$email = $_POST['email'];}
-    if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
+  // use PHPMailer\PHPMailer\PHPMailer;
+  // use PHPMailer\PHPMailer\Exception;
 
-    $to = "sungur.rugnus@gmail.com"; /*Укажите адрес, га который должно приходить письмо*/
-    $sendfrom   = "Из сайта"; /*Укажите адрес, с которого будет приходить письмо, можно не настоящий, нужно для формирования заголовка письма*/
-    $headers  = "From: " . strip_tags($sendfrom) . "\r\n";
-    $headers .= "Reply-To: ". strip_tags($sendfrom) . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
-    $subject = "$formData";
-    $message = "$formData
-  <b>Имя пославшего:</b> $name
-  <b>Телефон:</b> $phone";
-    $send = mail ($to, $subject, $message, $headers);
-    if ($send == 'true')
-    {
-    echo '<center>
+  // require 'phpmailer/src/Exception.php';
+  // require 'phpmailer/src/PHPMailer.php';
 
-  Спасибо за отправку вашего сообщения!
+  // $mail = new PHPMailer(true);
+  // $mail -> CharSet = 'UTF-8';
+  // $mail -> setLanguage('ru', 'phpmailer/language/');
+  // $mail -> IsHTML(true);
 
-  </center>';
-    }
-    else
-    {
-    echo '<center>
+  // //От кого письмо
+  // $mail -> setFrom('sender@gmail.com', 'Заказ с сайта');
+  // // Кому письмо 
+  // $mail -> addAddress('sungur.rugnus@gmail.com');
+  // // Тема письма 
+  // $mail -> Subject = 'Вам заказ с сайта';
 
-  <b>Ошибка. Сообщение не отправлено!</b>
+  // // Тело письма
+  // $body = 'Письмо с сайта Galex.';
 
-  </center>';
-    }
+  // if(trim(!empty($_POST['name']))) {
+  //   $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
+  // }
+  // if(trim(!empty($_POST['email']))) {
+  //   $body.='<p><strong>Email:</strong> '.$_POST['email'].'</p>';
+  // }
+  // if(trim(!empty($_POST['phone']))) {
+  //   $body.='<p><strong>Телефон:</strong> '.$_POST['phone'].'</p>';
+  // }
+  // if(trim(!empty($_POST['message']))) {
+  //   $body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
+  // }
+
+  // //Прикрепление файла
+  // if(!empty($_FILES['file']['tmp_name'])) {
+  //   // Путь загрузки файлов 
+  //   $filePath = __DIR__ . "/files/" . $_FILES['file']['name'];
+  //   // Грузим файл 
+  //   if (copy($_FILES['file']['tmp_name'], $filePath)) {
+  //     $fileAttach = $filePath;
+  //     $body .= '<p><strong>Файл в приложении</strong></p>';
+  //     $mail -> addAttachment(__DIR__ . "/files/" . $_FILES['file']['name']);
+  //   } 
+  // }
+
+  // $mail->Body = $body;
+  
+  // // Отправляем
+  // if(!$mail->send()) {
+  //   $message = 'Ошибка.';
+  // } else {
+  //   $message = 'Данные отправлены.';
+  // }
+
+  // $response = ['message' => $message];
+
+  // // header('Content-type: application/json');
+  // echo json_encode($response);
+
+
+// ---------------- ВАРИАНТ 4 --------------------
+if (isset ($_POST['email'])) {
+  $to = "sungur.rugnus@gmail.com";
+  $from = "galex-web@gmail.ru";
+  $subject = "Заполнена контактная форма на сайте ".$_SERVER['HTTP_REFERER'];
+  $message = "Имя пользователя: ".$_POST['name']."\nEmail пользователя ".$_POST['email']."\nТелефон пользователя ".$_POST['phone']."\nСообщение: ".$_POST['message']."\n\nАдрес сайта: ".$_SERVER['HTTP_REFERER'];
+ 
+  $boundary = md5(date('r', time()));
+  $filesize = '';
+  $headers = "MIME-Version: 1.0\r\n";
+  $headers .= "From: " . $from . "\r\n";
+  $headers .= "Reply-To: " . $from . "\r\n";
+  $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+  $message="
+Content-Type: multipart/mixed; boundary=\"$boundary\"
+ 
+--$boundary
+Content-Type: text/plain; charset=\"utf-8\"
+Content-Transfer-Encoding: 7bit
+ 
+$message";
+     if(is_uploaded_file($_FILES['file']['tmp_name'])) {
+         $attachment = chunk_split(base64_encode(file_get_contents($_FILES['file']['tmp_name'])));
+         $filename = $_FILES['file']['name'];
+         $filetype = $_FILES['file']['type'];
+         $filesize = $_FILES['file']['size'];
+         $message.="
+ 
+--$boundary
+Content-Type: \"$filetype\"; name=\"$filename\"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=\"$filename\"
+ 
+$attachment";
+     }
+   $message.="
+--$boundary--";
+ 
+  if ($filesize < 10000000) { // проверка на общий размер всех файлов. Многие почтовые сервисы не принимают вложения больше 10 МБ
+    mail($to, $subject, $message, $headers);
+    echo $_POST['name'].', Ваше сообщение отправлено, спасибо!';
   } else {
-    http_response_code(403);
-    echo "Попробуйте еще раз";
+    echo 'Извините, письмо не отправлено. Размер всех файлов превышает 10 МБ.';
   }
-
-
+}
 ?>

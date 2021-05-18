@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" ></script>
@@ -12,29 +13,29 @@
 </head>
 <body>
     
+    
 
     <div class="inner">
       <div class="blob1"></div>
 
       <div class="blob2"></div>
-      <div class="blob3"></div>
 
       <!-- <div class="blob4"></div> -->
       <div class="blob5"></div> 
-
+      
       <header class="header">
-        <a href="" class="logo"> <img src="images/header__logo.png" alt="Галекс, Галекс веб" width="210" height="50"></a>
+        <a href="" class="logo"> <img src="images/header_logo.png" alt="Галекс, Галекс веб" width="215" height="60"></a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ul class="menu">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#careers">Проекты</a></li>
-          <li><a href="#contact">Контакты</a></li>
+          <li onclick="document.getElementById('main').scrollIntoView({behavior: 'smooth'})"><a>Главная</a></li>
+          <li onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})"><a>Услуги</a></li>
+          <li onclick="document.getElementById('careers').scrollIntoView({behavior: 'smooth'})"><a>Проекты</a></li>
+          <li onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"><a>Контакты</a></li>
         </ul>
-      </header>
+     </header>
     
-        <div class="main">
+        <div class="main" id="main">
             <div class="main__description">
                 <div class="desc"><p><span >GA</span>lex - компания, занимающаяся услугами по созданию и продвижению сайтов, мобильных приложений и телеграмм ботов. <br>Мы поможем вашему бизнесу перейти на новый уровень  </p></div>
                 <div class="buttons">
@@ -125,7 +126,7 @@
 
 
 
-    <div class="portfolio" id="#portfolio">
+    <div class="portfolio" id="careers">
       <div class="blob6"></div>
 
       <div class="blob7"></div> 
@@ -141,12 +142,12 @@
         <img src="images/portfolio/project__1.png" alt="Сайт английского языка" />
       </div>
       <article class="card__content">
-        <h2 class="card__title">This Card spans two grid columns</h2>
+        <h2 class="card__title">Language Academy</h2>
         <div class="card__body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, eligendi.</p>
+          <p>Многофункциональный сервис дистанционного обучения английского языка</p>
         </div>
         <div class="card__footer">
-           <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+           <span class="tag"></span> <span class="tag"></span>
         </div>
       </article>
     </a>
@@ -159,12 +160,12 @@
         <img src="images/portfolio/project__2.png" alt="Сайт кошачьего магазина" />
       </div>
       <article class="card__content">
-        <h2 class="card__title">Another Card Title</h2>
+        <h2 class="card__title">Венец Славы</h2>
         <div class="card__body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam magnam doloribus adipisci. Voluptatibus, doloremque laborum officiis sequi, dolores saepe nihil, facere magnam quo est nobis in. Quod odit consequatur magni velit recusandae vel iure, rerum blanditiis eos, voluptate hic repudiandae!</p>
+          <p>Приют для животных</p>
         </div>
         <div class="card__footer">
-          in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+           <span class="tag"></span><span class="tag"></span>
         </div>
       </article>
     </a>
@@ -177,12 +178,12 @@
         <img src="images/portfolio/project__3.png" alt="Сайт ювелирных украшений" />
       </div>
       <article class="card__content">
-        <h2 class="card__title">Card Title</h2>
+        <h2 class="card__title">Азурит</h2>
         <div class="card__body">
-          <p>No Content</p>
+          <p>Интернет-магазин премиальных ювелирных изделий</p>
         </div>
         <div class="card__footer">
-          in <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+           <span class="tag"></span><span class="tag"></span>
         </div>
       </article>
     </a>
@@ -193,12 +194,12 @@
         <img src="images/portfolio/project__4.png" alt="Спортивный комплекс Восток-Арена" />
       </div>
       <article class="card__content">
-        <h2 class="card__title">Card Title That spans two lines</h2>
+        <h2 class="card__title">Восток-Арена</h2>
         <div class="card__body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, eligendi.</p>
+          <p>Корпоративный сайт для уникального спортивного комплекса</p>
         </div>
         <div class="card__footer">
-           <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+           <span class="tag"></span><span class="tag"></span>
         </div>
       </article>
     </a>
@@ -210,18 +211,18 @@
         <img src="images/portfolio/project__5.png" alt="Продажа окон - Оконния" />
       </div>
       <article class="card__content">
-        <h2 class="card__title">Card Title That spans two lines</h2>
+        <h2 class="card__title">Оконния</h2>
         <div class="card__body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, eligendi.</p>
+          <p>Одностраничный лендинг для уникального предпрития</p>
         </div>
         <div class="card__footer">
-           <span class="tag">Lorem</span>, <span class="tag">Ipsum</span>
+           <span class="tag"></span><span class="tag"></span>
         </div>
       </article>
     </a>
   </li>
 </ul>
-          
+  
       </div>
 
     <div class="callback">
@@ -231,39 +232,53 @@
 
       <div class="callback__form">
         <form class="form" id="form" name="form" enctype="multipart/form-data" method="post">
-          <input type="text" class="form-field" name="name" id="name" placeholder="Введите ваше имя">
-          <input type="email" name="contactFF" id="contactFF" required placeholder="например, ivan@yandex.ru" class="w100 border">
-          <input type="text" class="form-field" name="phone" placeholder="Введите ваш телефон">
+          <input class="form__input" type="text" class="form-field _req" name="name" id="name" placeholder="Введите ваше имя">
+          <input class="form__input" type="email" name="email" id="email" required placeholder="например, ivan@yandex.ru" class="w100 border _req _email">
+          <input class="form__input" type="text" class="form-field _req" name="phone" placeholder="Введите ваш телефон" id="phone" name="phone">
           
           <textarea id="message" class="form-control" name="message" rows="8" placeholder="Ваше сообщение"></textarea>
           <!-- <div class="button-wrapper">
             <span class="label">
               Прикрепить файл
             </span>
-            <input type="file" name="fileFF" id="fileFF" class="upload-box" placeholder="Upload File">
           </div> -->
+          <label for="file" class="label">
+            <i class="material-icons">attach_file</i>
+            <span class="title">Добавить файл</span>
+            <input type="file" name="file" id="file" class="form__upload" 
+            accept=".doc, .docx, .pdf, application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+            <div class="file-show"></div>
+
+          </label>
+            
+            
+          
           <button class="form-button" name="submit" type="submit">Отправить</button>
           <input type="hidden" name="formData" value="Заявка с сайта">
         </form>
       </div>
     </div> 
 
-    <div class="footer">
+    <div class="footer" id="contact">
       <div class="footer__title">
         <h3>Контакты</h3>
       </div>
       <div class="footer__contact">
         <div class="footer__phone">
-          
           <img src="images/footer/footer__phone.svg" alt="Телефон">+79684616562 <br>
-          <img src="images/footer/footer__phone.svg" alt="Телефон">+79888666609
+          <img src="images/footer/footer__phone.svg" alt="Телефон">+79888666609 <br>
         </div>
         <div class="footer__links">
           @Galex <br>
-          dapa08@mail.ru
+          dapa08@mail.ru<br>
         </div>
       </div>
+      <div class="footer__inst">
+       <a href="https://www.instagram.com/galexweb/?hl=ru"><img class="inst" src="images/footer/footer__icon.png" href="" alt="Инстаграм" width="50" height="50"> </a><br>
     </div>
+    </div>
+
+    
 
     <footer>
       <div class="overlay js-overlay-thank-you">

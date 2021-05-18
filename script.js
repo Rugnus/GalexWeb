@@ -64,91 +64,30 @@ $(document).ready(function () {
         itemDesign.classList.add('item-active');
     });
 
-
-// ---------------- ВАРИАНТ 1 -------------------
-
-    // ОТПРАВКА ЗАЯВКИ
-    // $('#form').submit(function(e) { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //     if (document.form.name.value == '' || document.form.phone.value == '' ) {
-	// 		valid = false;
-	// 		return valid;
-	// 	}
-	// 	$.ajax({
-	// 		method: "POST",
-	// 		url: "send.php",
-	// 		data: $(this).serialize(),
-    //         success: function() {
-    //             console.log("Message send");
-    //             $('.js-overlay-thank-you').fadeIn();
-    //             $(this).find('input').val('');
-    //             $('#form').trigger('reset');
-    //         },
-	// 	});
-	// });
-
-
-
-    // ---------------- ВАРИАНТ 2 -------------------
-
-    // document.getElementById('form').addEventListener('submit', function(evt){
-    //     var http = new XMLHttpRequest(), f = this;
-    //     evt.preventDefault();
-    //     http.open("POST", "send.php", true);
-    //     http.onreadystatechange = function() {
-    //       if (http.readyState == 4 && http.status == 200) {
-    //         alert(http.responseText);
-    //         if (http.responseText.indexOf(f.name.value) == 0) { // очистить поле сообщения, если в ответе первым словом будет имя отправителя
-    //           f.message.removeAttribute('value');
-    //           f.message.value='';
-    //         }
-    //       }
-    //     }
-    //     http.onerror = function() {
-    //       alert('Извините, данные не были переданы');
-    //     }
-    //     http.send(new FormData(f));
-    //   }, false);
-
-
-// ---------------- ВАРИАНТ 3 -------------------
-
-    $("form").submit(function () {
-        // Получение ID формы
-        var formID = $(this).attr('id');
-        // Добавление решётки к имени ID
-        var formNm = $('#' + formID);
-        $.ajax({
-            type: "POST",
-            url: '/send.php',
-            data: formNm.serialize(),
-            success: function (data) {
-                // Вывод текста результата отправки
-                $(formNm).html(data);
-            },
-            error: function (jqXHR, text, error) {
-                // Вывод текста ошибки отправки
-                $(formNm).html(error);
+    // --------------------------ВАРИАНТ 4--------------------------
+    document.getElementById('form').addEventListener('submit', function(evt){
+        var http = new XMLHttpRequest(), f =this;
+        var th = $(this);
+        evt.preventDefault;
+        http.open("POST", "send.php", true);
+        http.onreadystatechange = function() {
+            if(http.readyState == 4 && http.status == 200) {
+                alert(http.responseText);
+                if (http.responseText.indexOf(f.name.value ) == 0) {
+                    th.trigger("reset");
+                }
             }
-        });
-        return false;
-    });
+        }
+        http.onerror = function() {
+            alert("Ошибка, попробуйте ещё раз!");
+        }
+        http.send(new FormData(f));
+    }, false);
+
+    $('#form').on('change', '.form__upload', function (e) {
+        var file = e.target.files[0].name;
+        $(this).next('.file-show').html(file);
+      });
 
 });
 
-// ЗАКРЫТЬ ПОПАП "СПАСИБО"
-// $('.js-close-thank-you').click(function() {
-//     $('.js-overlay-thank-you').fadeOut();
-// });
-
-// $(document).mouseup(function(e) {
-//     var popup = $('.popup');
-//     if(e.target!=popup[0]&&popup.has(e.target).length === 0) {
-//         $('.js-overlay-thank-you').fadeOut();
-//     }
-// })
-
-// $(function($) {
-//     $('[name="phone"]').mask("+7(999) 999-9999");
-// })
