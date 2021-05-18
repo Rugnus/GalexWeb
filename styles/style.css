@@ -48,6 +48,10 @@ ul {
   overflow: hidden;
 }
 
+.header li {
+    cursor: pointer;
+}
+
 .header li a {
   display: block;
   padding: 20px 20px;
@@ -56,6 +60,7 @@ ul {
 
 li a {
   position: relative;
+  cursor: pointer;
 }
 
 li a::before {
