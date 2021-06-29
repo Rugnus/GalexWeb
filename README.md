@@ -16,5 +16,5 @@
 
 ## Личный вклад участников
 
-[Гасанов Сунгур]()  <br />
-[Алексеев Даниил]()
+[Гасанов Сунгур](https://github.com/Rugnus/GalexWeb/blob/master/gasanov.md)  - Работал в объёме 78 часов 10 минут<br />
+[Алексеев Даниил](https://github.com/Rugnus/GalexWeb/blob/master/alexseev.md) - Работал в объёме 76 часов 30 минут
