@@ -1,0 +1,35 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %} Article list {% endblock title %}
+
+{% block content %}
+<h2>Вы действительно хотите удалить данную статью?</h2>
+<table>
+    <thead>
+        <th>
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Price
+        </th>
+    </thead>
+    <tr>
+        <td>
+            {{ article.name|title }}
+        </td>
+        <td>
+            {{ article.post_text }}
+        </td>
+        <td>
+            {{ article.post_datetime }}
+        </td>
+    </tr>
+</table>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="подтвердить"></form>
+{% endblock content %}
